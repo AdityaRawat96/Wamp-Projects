@@ -115,7 +115,18 @@ function validate()
   {
     if(navigator.onLine)
     {
-      alert('success');
+      $.ajax({
+        type: 'POST',
+        url: 'process.php',
+        data: { text1: val1, text2: val2 },
+
+        beforeSend: function() {
+
+        },
+        success: function(response) {
+            $('#result').html(response);
+        }
+      });
     }
     else
     {
