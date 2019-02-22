@@ -121,10 +121,12 @@ function validate()
         data: { name: $("#name").val(), phone: $("#phone").val() },
 
         beforeSend: function() {
+          $('.loader').fadeIn(2000); $('.blurDiv').fadeOut(2000);
 
         },
         success: function(response) {
-            alert(response);
+          $('#responseText').html(response);
+          $('.loader').fadeOut(2000); $('.blurDiv').fadeIn(2000);
         }
       });
     }
