@@ -118,13 +118,13 @@ function validate()
       $.ajax({
         type: 'POST',
         url: 'process.php',
-        data: { text1: val1, text2: val2 },
+        data: { name: $("#name").val(), phone: $("#phone").val() },
 
         beforeSend: function() {
 
         },
         success: function(response) {
-            $('#result').html(response);
+            alert(response);
         }
       });
     }
