@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Carousel</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+    <script type="text/javascript" src='Assets/JS/validator.js'></script>
+    <script type="text/javascript" src='Assets/JS/speech.js'></script>
+
+    <link rel="stylesheet" href="Assets/CSS/style.css">
+
+  </head>
+  <body style='background-color:#616663;'  id='topDivElement'>
+
+    <nav class="navbar navbar-expand-md bg-dark navbar-dark sticky-top" style="background-color:#fff;padding:20px 60px 20px 60px;">
+      <!-- Brand -->
+      <a href="#"><i class="fab fa-angrycreative fa-3x"></i></a>
+
+      <!-- Toggler/collapsibe Button -->
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <!-- Navbar links -->
+      <div class="collapse navbar-collapse justify-content-end" id="collapsibleNavbar">
+        <ul class="navbar-nav">
+          <li>
+            <div class="btn btn-dark" onclick="$('html, body').animate({  scrollTop: $('#paragraph1').offset().top }, 2000);">
+              P1
+            </div>
+          </li>
+          <li>
+            <div class="btn btn-dark" onclick="$('html, body').animate({  scrollTop: $('#paragraph2').offset().top }, 2000);">
+              P2
+            </div>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="https://www.facebook.com/adityavickyrawat"><i class="fab fa-facebook-square fa-2x"></i></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="https://twitter.com/AdityaR71488398"><i class="fab fa-twitter-square fa-2x"></i></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="https://github.com/AdityaRawat96"><i class="fab fa-github-square fa-2x"></i></a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+    <br><br>
+
+    <center>
+      <div id="demo" class="carousel slide" data-ride="carousel" style='height:10%; width:95%;'>
+        <!-- Indicators -->
+        <ul class="carousel-indicators">
+          <li data-target="#demo" data-slide-to="0" class="active"></li>
+          <li data-target="#demo" data-slide-to="1"></li>
+          <li data-target="#demo" data-slide-to="2"></li>
+        </ul>
+
+        <!-- The slideshow -->
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img class="image-responsive"  src="Assets/images/1.jpg" alt="Los Angeles" style='height:10%; width:95%;'>
+          </div>
+          <div class="carousel-item">
+            <img class="image-responsive"  src="Assets/images/2.jpg" alt="Chicago" style='height:10%; width:95%;'>
+          </div>
+          <div class="carousel-item">
+            <img class="image-responsive" src="Assets/images/3.jpg" alt="New York" style='height:10%; width:95%;'>
+          </div>
+        </div>
+
+        <!-- Left and right controls -->
+        <a class="carousel-control-prev" href="#demo" data-slide="prev">
+          <span class="carousel-control-prev-icon"></span>
+        </a>
+        <a class="carousel-control-next" href="#demo" data-slide="next">
+          <span class="carousel-control-next-icon"></span>
+        </a>
+      </div>
+      <br><br><br>
+
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-lg-4 awesomeBox" style='padding:20px;'>
+            <div class="container-fluid" style='padding:20px; background-color:#ef3b3b; color: white; border-radius:7px;'>
+              <i class="fas fa-biohazard fa-3x"></i>
+              <br><br><br>
+              <p style='text-align: justify;'>The moderator in a GD sets the ball rolling by announcing the topic for discussion. Sometimes, the moderator may ask the group members to discuss among themselves and come up with a GD topic or the moderator may also provide the group with a choice of topics and ask the group to choose any one topic for discussion. Often students are awarded marks on the approach they take in selecting the topic and the reasons they cite for selecting the topic.</p>
+            </div>
+          </div>
+          <div class="col-lg-4 awesomeBox" style='padding:20px;'>
+            <div class="container-fluid" style='padding:20px; background-color:#4daf6a; border-radius:7px;'>
+              <i class="fas fa-blog fa-3x"></i>
+              <br><br><br>
+              <p style='text-align: justify;'>The moderator in a GD sets the ball rolling by announcing the topic for discussion. Sometimes, the moderator may ask the group members to discuss among themselves and come up with a GD topic or the moderator may also provide the group with a choice of topics and ask the group to choose any one topic for discussion. Often students are awarded marks on the approach they take in selecting the topic and the reasons they cite for selecting the topic.</p>
+            </div>
+          </div>
+          <div class="col-lg-4 awesomeBox" style='padding:20px;'>
+            <div class="container-fluid" style='padding:20px; background-color:#ef3b3b; color: white; border-radius:7px;'>
+              <i class="fas fa-barcode fa-3x"></i>
+              <br><br><br>
+              <p style='text-align: justify;'>The moderator in a GD sets the ball rolling by announcing the topic for discussion. Sometimes, the moderator may ask the group members to discuss among themselves and come up with a GD topic or the moderator may also provide the group with a choice of topics and ask the group to choose any one topic for discussion. Often students are awarded marks on the approach they take in selecting the topic and the reasons they cite for selecting the topic.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <br id='paragraph1'>
+      <br>
+      <div class="container-fluid" >
+        <p style='font-size:16px; color: black; padding: 20px;text-align: justify;'>
+          Java (Indonesian: Jawa; Javanese: ꦗꦮ; Sundanese: ᮏᮝ) is an island of Indonesia, bordered by the Indian Ocean on the south and the Java Sea on the north. With a population of over 141 million (Java only) or 145 million (including the inhabitants of its surrounding islands), Java is the home to 56.7 percent of the Indonesian population and is the world's most populous island.[1] The Indonesian capital city, Jakarta, is located on its northwestern coast. Much of Indonesian history took place on Java. It was the center of powerful Hindu-Buddhist empires, the Islamic sultanates, and the core of the colonial Dutch East Indies. Java was also the center of the Indonesian struggle for independence during the 1930s and 1940s. Java dominates Indonesia politically, economically and culturally. Four of Indonesia's eight UNESCO world heritage sites are located in Java: Ujung Kulon National Park, Borobudur Temple, Prambanan Temple, and Sangiran Early Man Site.
+
+          Formed mostly as the result of volcanic eruptions from geologic subduction between Sunda Plate and Australian Plate, Java is the 13th largest island in the world and the fifth largest in Indonesia by landmass at about 138,800 square kilometres (53,600 sq mi). A chain of volcanic mountains forms an east–west spine along the island. Three main languages are spoken on the island: Javanese, Sundanese, and Madurese, where Javanese is the most spoken; it is the native language of about 60 million Javanese people in Indonesia, most of whom live on Java. Furthermore, most residents are bilingual, speaking Indonesian (the official language of Indonesia) as their first or second language. While the majority of the people of Java are Muslim, Java's population comprises people of diverse religious beliefs, ethnicities, and cultures.
+
+          Java is divided into four administrative provinces, West Java, Central Java, East Java, and Banten, and two special regions, Jakarta and Yogyakarta.
+        </p>
+      </div>
+
+      <div class="container-fluid" id='paragraph2'>
+        <p style='font-size:16px; color: white; padding: 20px;text-align: justify;'>
+          Java has been traditionally dominated by an elite class, while the people in the lower classes were often involved in agriculture and fishing. The elite class in Java has evolved over the course of history, as cultural wave after cultural wave immigrated to the island. There is evidence that South Asian emigres were among this elite, as well as Arabian and Persian immigrants during the Islamic eras. More recently, Chinese immigrants have also become part of the economic elite of Java. Although politically the Chinese generally remain sidelined, there are notable exceptions, such as the former governor of Jakarta, Basuki Tjahaja Purnama. Though Java is increasingly becoming more modern and urban, only 75% of the island has electricity. Villages and their rice paddies are still a common sight. Unlike the rest of Java, the population growth in Central Java remains low. Central Java however has a younger population than the national average.[35] The slow population growth can in part be attributed to the choice by many people to leave the more rural Central Java for better opportunities and higher incomes in the bigger cities.[36] Java's population continues to rapidly increase despite many Javanese leaving the island. This is somewhat due to the fact that Java is the business, academic, and cultural hub of Indonesia, which attracts millions of non-Javanese people to its cities. The population growth is most intense in the regions surrounding Jakarta and Bandung, which is reflected through the demographic diversity in those areas.
+
+          Population development
+          With a combined population of 145 million in the 2015 census (including Madura's 3.7 million),[37] which is estimated for 2014 at 143.1 million (including 3.7 million for Madura), Java is the most populous island in the world and is home to 57% of Indonesia's population.[37] At over 1,100 people per km² in 2014, it is also one of the most densely populated parts of the world, on par with Bangladesh. Every region of the island has numerous volcanoes, with the people left to share the remaining flatter land. Because of this, many coasts are heavily populated and cities ring around the valleys surrounding volcanic peaks.
+
+          The population growth rate more than doubled in economically depressed Central Java in the latest 2010–2015 period vs 2000–2010, indicative of migration or other issues; there were significant volcanic eruptions during the earlier period. Approximately 45% of the population of Indonesia is ethnically Javanese,[38] while Sundanese make a large portion of Java's population as well.
+
+          The western third of the island (West Java, Banten, and DKI Jakarta) has an even higher population density, of nearly 1,500 per square kilometer and accounts for the lion's share of the population growth of Java.[37] It is home to three metropolitan areas, Greater Jakarta (with outlying areas of Greater Serang and Greater Sukabumi), Greater Bandung, and Greater Cirebon.
+        </p>
+      </div>
+
+    </center>
+    <div class="container-fluid bg-dark" style='padding:20px;'>
+      <div class="row">
+        <div class="col-lg-6" style='color:#fff;text-align:left;'>
+          <span>&copy; &nbsp; Aditya Rawat, 2019.</span>
+        </div>
+        <div class="col-lg-6" style='color:#fff;text-align:right;'>
+          <span><a href='form.html'>CONTACT US.</a></span>
+        </div>
+      </div>
+    </div>
+
+    <div id="back2Top" class="btn btn-dark" onclick="$('html, body').animate({  scrollTop: $('#topDivElement').offset().top }, 2000);">
+      <span>Back to top <i class="fas fa-angle-double-up"></i></span>
+    </div>
+
+  </body>
+</html>

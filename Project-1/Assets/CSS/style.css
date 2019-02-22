@@ -1,0 +1,44 @@
+.awesomeBox{
+  transform: scale(1);
+  -webkit-transform: scale(1);
+  -moz-transform: transform: scale(1);
+  -o-transform: transform: scale(1);
+  transition: 0.3s all ease-in-out 0s;
+  -webkit-transition: 0.3s all ease-in-out 0s;
+  -moz-transition: transition: 0.3s all ease-in-out 0s;
+  -o-transition: transition: 0.3s all ease-in-out 0s;
+}
+.awesomeBox :hover{
+  transform: scale(1.04);
+  -webkit-transform: scale(1.04);
+  -moz-transform: transform: scale(1.04);
+  -o-transform: transform: scale(1.04);
+  transition: 0.3s all ease-in-out 0s;
+  -webkit-transition: 0.3s all ease-in-out 0s;
+  -moz-transition: transition: 0.3s all ease-in-out 0s;
+  -o-transition: transition: 0.3s all ease-in-out 0s;
+}
+
+#back2Top {
+    position:fixed;
+    bottom: 50px;
+    right: 20px;
+    overflow: hidden;
+    cursor: pointer;
+}
+#back2Top:hover {
+    background-color: #DDF;
+    color: #000;
+}
+
+.speakAlert1{
+  display:inline-block;
+  width:400px;
+  height:50px;
+}
+
+.speakAlert2{
+  display:none;
+  width:400px;
+  height:50px;
+}
