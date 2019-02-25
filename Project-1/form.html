@@ -29,11 +29,14 @@
     <link rel="stylesheet" href="Assets/CSS/style.css">
 
   </head>
-  <body style='background-color:#616663;'>
+  <body style='background-color:#616663;' oncontextmenu="return false" onselectstart="return false" ondragstart="return false" oncopy="return false" onpaste="return false">
 
     <div class="container-fluid loader" style="position:fixed; height:100%; width:100%; background-color:black; display:none;">
       <center>
-        <h1 style='position:absolute;top:40%;color:white;width:100%;align-text:center;' id="responseText"></h1>
+        <span style='position:absolute;left:0px;top:40%;color:white;width:100%;align-text:center;'>
+          <h1 id="responseText"></h1>
+          <h4>Your response has been recorded.</h4>
+        </span>
       </center>
     </div>
 
@@ -62,13 +65,15 @@
         </ul>
       </div>
     </nav>
+    <br>
+    <label class='br-dark' style="padding:5px;background-color:#fff;border-radius:10px;margin-left:20px;" id='fNum'>FORM NO. :</label>
     <center>
       <div class="container-fluid speakAlert2" id='alertDiv'>
 
       </div>
     </center>
     <div class="blurDiv">
-    <br><br>
+    <br>
     <center>
       <div class="container-fluid">
         <div class="table-responsive">
@@ -111,7 +116,7 @@
                       </div>
                     </div>
                   </td>
-                  <td><input id='inputCategory'></input>
+                  <td><input id='inputCategory' oninput="return false" onkeyup="return false" onkeydown="return false" autocomplete="off" disabled></input>
                   <div id='divdiv'></div></td>
                 </tr>
                 <tr>

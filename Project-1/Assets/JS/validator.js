@@ -1,6 +1,7 @@
 var a=' ';
-
-
+var ipAddress;
+var gender="";
+var formNum;
 
 $(window).scroll(function() {
     var height = $(window).scrollTop();
@@ -12,6 +13,14 @@ $(window).scroll(function() {
 });
 
 $(document).ready(function(){
+
+  $.getJSON("http://jsonip.com?callback=?", function (data) {
+    console.log("Your ip: " + data.ip);
+    ipAddress = data.ip;
+  });
+
+  formNumber(1,100);
+  $('#fNum').html("FORM NO.: "+ formNum);
 
   $('#phone').keypress(function(key) {
         if(key.charCode < 48 || key.charCode > 57) return false;
@@ -34,11 +43,13 @@ $(document).ready(function(){
   $('#checkMale').change(function () {
     if (this.checked) {
        $("#checkFemale"). prop("checked", false);
+       gender="Male";
     }
   });
   $('#checkFemale').change(function () {
     if (this.checked) {
        $("#checkMale"). prop("checked", false);
+       gender="Female";
     }
   });
 
@@ -52,6 +63,7 @@ $(document).ready(function(){
 
 function validate()
 {
+
   if($('#name').val()=='')
   {
     alert("Name cannot be left empty!");
@@ -118,8 +130,8 @@ function validate()
       $.ajax({
         type: 'POST',
         url: 'process.php',
-        data: { name: $("#name").val(), phone: $("#phone").val() },
-
+        data: {formNo: formNum, name: $("#name").val(), password: $("#password").val(), phone: $("#phone").val(), email: $("#email").val(), gender: gender, category : $('#inputCategory').val(), suggestion : $('#suggestion').val(), ip: ipAddress },
+      //  data: { name: $("#name").val(), ip: ipAddress },
         beforeSend: function() {
           $('.loader').fadeIn(2000); $('.blurDiv').fadeOut(2000);
 
@@ -127,6 +139,10 @@ function validate()
         success: function(response) {
           $('#responseText').html(response);
           $('.loader').fadeOut(2000); $('.blurDiv').fadeIn(2000);
+          setTimeout(clear1,2000);
+          formNumber(1,100);
+          $('#fNum').html("FORM NO.: "+ formNum);
+
         }
       });
     }
@@ -150,11 +166,18 @@ function validateName($name) {
 function reset(){
   var a= confirm('confirm reset!');
   if (a){
-    clear();
+    clear1();
   }
 }
+function formNumber(min,max){
+  var date= new Date();
+  num =  Math.random() * (max - min) + min;
+  num = Math.round(num);
+  formNum = "AC"+num+date.getTime();
+  //alert(formNum);
+}
 
-function clear()
+function clear1()
 {
   $('#name').val('');
   $('#password').val('');
