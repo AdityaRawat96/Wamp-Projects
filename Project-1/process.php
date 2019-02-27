@@ -13,11 +13,7 @@ $suggestion=$_POST['suggestion'];
 $date = $dateTime->format("d/m/y  H:i A");
 $ip=$_POST['ip'];
 
-$con= mysqli_connect("localhost", "root", "")
- or die("Unable to connect to the database server!");
- $roh= mysqli_select_db($con, 'wt')
-  or die("Unable to connect to the database server! <br><hr width=800 style=height:1px;></hr><center><input type=button value=OK id=1 class=buttons onclick=cancelit();></center>");
-
+include('connection.php');
 
 
 $sql= mysqli_query($con, "insert into form(formNo,name,password,phone,email,gender,category,suggestion,date,ip) values ('$form','$name','$password','$phone','$email','$gender','$category','$suggestion','$date','$ip')")
