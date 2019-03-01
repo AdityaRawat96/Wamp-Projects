@@ -33,14 +33,11 @@ $p6=$row["date"];
   <td><?php echo $p4; ?></td>
   <td><?php echo $p5; ?></td>
   <td><?php echo $p6; ?></td>
-  <td><a href="searchResult.html?myVar1='<?php echo $p0; ?>'"><i class="fas fa-eye fa-2x"></i></a></td>
+  <td><a onclick="Javascript: window.open('showResult.php?myVar1=<?php echo $p0; ?>','_blank')" href="#"><i class="fas fa-eye fa-2x"></i></a></td>
 </tr>
 
 <?php
 
 }
-
-
-
 
 ?>

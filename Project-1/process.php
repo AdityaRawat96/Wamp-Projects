@@ -4,7 +4,7 @@ $dateTime = new DateTime('now', new DateTimeZone('Asia/Kolkata'));
 
 $form=$_POST['formNo'];
 $name=$_POST['name'];
-$password=$_POST['password'];
+$password=md5($_POST['password']);
 $phone=$_POST['phone'];
 $email=$_POST['email'];
 $gender=$_POST['gender'];
